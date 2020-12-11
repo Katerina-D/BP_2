@@ -3,6 +3,8 @@
 
 #include <QMainWindow>
 #include <QPainter>
+#include <representer.h>
+#include <manager.h>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -18,7 +20,9 @@ public:
 
 private:
     Ui::MainWindow *ui;
-    void paintEvent(QPaintEvent* paint_event);
+	Representer* representer;
+	Manager *manager;
+	void paintEvent(QPaintEvent* paint_event);
     void mousePressEvent(QMouseEvent* mouse_event);
 };
 #endif // MAINWINDOW_H
